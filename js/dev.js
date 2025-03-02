@@ -36,3 +36,52 @@ function getFormattedDate() {
 // Apply date
 document.getElementById("dateDisplay").textContent = getFormattedDate();
 
+// Update task counter
+document.getElementById('taskCount').textContent = assignedTaskCount.toString().padStart(2, '0');
+
+// Complete button click handler
+document.querySelectorAll('.complete-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const taskName = this.getAttribute('data-task');
+        const taskId = this.getAttribute('data-id');
+
+        // First alert
+        alert('Board updated successfully');
+
+        // Disable the button
+        this.disabled = true;
+        this.classList.remove('bg-blue-500');
+        this.classList.add('bg-blue-200');
+
+        // Decrease assigned task count if greater than 0
+        if (assignedTaskCount > 0) {
+            assignedTaskCount--;
+            document.getElementById('taskCount').textContent = assignedTaskCount.toString().padStart(2, '0');
+        }
+
+        // Increase checkmark count and update the navbar counter
+        checkmarkCount++;
+        document.getElementById('taskCounter').textContent = checkmarkCount;
+
+        completedTaskCount++;
+
+        // Add to activity log
+        const activityLog = document.getElementById('activityLog');
+        const activityItem = document.createElement('div');
+        activityItem.className = 'text-sm text-gray-600 mb-3';
+        activityItem.innerHTML = `You have Complete The Task <span class="font-medium">${taskName}</span> at ${getCurrentTime()}`;
+        activityLog.prepend(activityItem);
+
+        // Check if this is the sixth task completed
+        if (completedTaskCount === totalTasks) {
+            // Use setTimeout to ensure this alert shows after the first one is closed
+            setTimeout(function () {
+                alert('Congrats!!! You have completed all the current task');
+            }, 100);
+        }
+    });
+});
+
+
+
+
