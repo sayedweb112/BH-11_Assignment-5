@@ -22,8 +22,8 @@
     <nav class="flex justify-between items-center p-4 shadow-md bg-white rounded-lg">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <div class="bg-blue-500 p-2 rounded-lg">
-                <span class="text-white font-bold text-lg">D</span>
+            <div class="p-2 rounded-lg">
+                <span><img src="./assets/logo.png" alt=""></span>
             </div>
             <span class="text-lg font-semibold">Dev<span class="font-bold">Board</span></span>
         </div>
@@ -39,15 +39,46 @@
         <div class="mb-4">
             <p class="text-lg font-semibold">Question-1: What are the different ways to select an element in the DOM?
             </p>
-            <textarea class="w-full p-2 border rounded mt-2" rows="3" placeholder="Write your answer here...">getElementById → Selects a single element by ID.  
-                getElementsByClassName → Selects multiple elements by class (live collection).  
-                getElementsByTagName → Selects multiple elements by tag (live collection).  
-                getElementsByName → Selects elements by name attribute (NodeList).  
-                querySelector → Selects the first matching element using a CSS selector.  
-                querySelectorAll → Selects all matching elements (static NodeList).  
-                document.body / document.documentElement → Directly access `<body>` or `<html>`.</textarea>
+            <textarea class="w-full p-2 border rounded mt-2" rows="3">getElementById -- Selects a single element by ID.  
+                getElementsByClassName -- Selects multiple elements by class (live collection).  
+                getElementsByTagName -- Selects multiple elements by tag (live collection).  
+                getElementsByName -- Selects elements by name attribute (NodeList).  
+                querySelector -- Selects the first matching element using a CSS selector.  
+                querySelectorAll -- Selects all matching elements (static NodeList).  
+                document.body / document.documentElement -- Directly access `<body>` or `<html>`.</textarea>
         </div>
 
+        <!-- Question 2 -->
+        <div>
+            <p class="text-lg font-semibold">Question-2: What is the difference between innerHTML, innerText, and
+                textContent?</p>
+            <textarea class="w-full p-2 border rounded mt-2" rows="3">innerHTML → Retrieves or sets HTML content inside an element. It processes and renders HTML tags.
+                innerText -- Retrieves or sets only the visible text inside an element. It ignores hidden elements and does not process HTML.
+                textContent -- Retrieves or sets all text inside an element, including hidden text. It does not process HTML.
+                Key Differences:
+                innerHTML keeps HTML formatting, while innerText and textContent do not.
+                innerText ignores hidden elements, but textContent includes them.
+                innerHTML is slower because it parses HTML, whereas innerText and textContent are faster.</textarea>
+        </div>
+        <div>
+            <p class="text-lg font-semibold">Question-3: What is event delegation in the DOM?</p>
+            <textarea class="w-full p-2 border rounded mt-2"
+                rows="3">In the DOM "event delegation" is a technique where attach a single event listener to a parent element, allowing it to handle events triggered on its child elements, instead of adding separate listeners to each child element</textarea>
+        </div>
+        <div>
+            <p class="text-lg font-semibold">Question-4:What is event bubbling in the DOM?
+
+            </p>
+            <textarea class="w-full p-2 border rounded mt-2"
+                rows="3">In the DOM, "event bubbling" refers to the behavior where when an event occurs on an element, it triggers not only on that element but also on its parent elements in the hierarchy.</textarea>
+        </div>
+        <div>
+            <p class="text-lg font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?
+            </p>
+            <textarea class="w-full p-2 border rounded mt-2"
+                rows="3">In JavaScript, we can create elements using document.createElement(), add them to the DOM using methods like appendChild(), prepend(), or insertBefore(), and remove them using removeChild() or remove()</textarea>
+        </div>
+    </div>
 
 </body>
 
