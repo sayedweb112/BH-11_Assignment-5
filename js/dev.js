@@ -74,7 +74,7 @@ document.querySelectorAll('.complete-btn').forEach(button => {
 
         // Check if this is the sixth task completed
         if (completedTaskCount === totalTasks) {
-            // Use setTimeout to ensure this alert shows after the first one is closed
+            // Use setTimeout to ensure this alert 
             setTimeout(function () {
                 alert('Congrats!!! You have completed all the current task');
             }, 100);
@@ -82,6 +82,9 @@ document.querySelectorAll('.complete-btn').forEach(button => {
     });
 });
 
-
+// Clear history button 
+document.getElementById('clearHistory').addEventListener('click', function () {
+    document.getElementById('activityLog').innerHTML = '';
+});
 
 
