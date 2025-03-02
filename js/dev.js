@@ -13,5 +13,26 @@ document.getElementById('colorSwitcher').addEventListener('click', function () {
     body.classList.add(colors[index]);
 });
 
+//  Checkmark count navbar
+let checkmarkCount = 23;
+let assignedTaskCount = 6;
+let completedTaskCount = 0;
+const totalTasks = 6;
 
+//  Current time format
+function getCurrentTime() {
+    const now = new Date();
+    return now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+}
+
+//  Get formatted date
+function getFormattedDate() {
+    const today = new Date();
+    const options = { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' };
+    return today.toLocaleDateString('en-US', options);
+}
+
+
+// Apply date
+document.getElementById("dateDisplay").textContent = getFormattedDate();
 
