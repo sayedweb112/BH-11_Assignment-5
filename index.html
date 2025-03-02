@@ -48,52 +48,63 @@
     <section class="bg-gray-100 font-sans">
         <div class="max-w-7xl mx-auto p-6">
             <div class="flex flex-col md:flex-row gap-6">
+                <!-- Main Task Board Area (Left Side) -->
                 <div class="bg-white rounded-lg shadow-lg p-6 md:w-3/4">
-
+                    <!-- Header row -->
                     <div class="flex flex-wrap justify-between items-center mb-6">
-
-                        <!--Task Assigned-->
+                        <!-- Task Assigned -->
                         <div class="flex items-center p-4 rounded-lg">
                             <div class="mr-4">
                                 <div class="text-white rounded-md p-2">
                                     <i class="fas fa-check-circle"></i>
-
                                 </div>
-
                             </div>
+
                             <div>
                                 <img src="./assets/checkbox.png" alt="">
-                                <div class="text-gray-600 text-sm">Task Assigned
-
+                                <div class="text-gray-600 text-sm">Task
+                                    Assigned
                                 </div>
                                 <div class="text-2xl font-bold" id="taskCount">06</div>
                             </div>
                         </div>
-                        <!---Discover something -->
+
+                        <!-- Discover Something New -->
                         <div class="bg-blue-500 text-white p-4 rounded-lg flex items-center">
                             <div class="mr-3">
+                                <i class="fas fa-newspaper text-2xl"></i>
                             </div>
-                            <button onclick="goIN()" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                                <span><img src="./assets/board.png" alt=""></span>Discover Something New Today!</button>
 
+                            <button onclick="goIn()" class="bg-blue-500 text-white px-4 py-2 rounded-lg"><span> <img
+                                        src="./assets/board.png" alt=""></span>Discover
+                                Something New Today!</button>
 
                         </div>
-                        <!--Current Date-->
+
+                        <!-- Date -->
                         <div>
+
+
                             <div class="text-center bg-white p-6 rounded-lg shadow-md">
                                 <img src="./assets/calender.png" alt="">
-                                <p id="dateDisplay" class="text-lg text-black-400 mt-2"></p>
 
+                                <p id="dateDisplay" class="text-lg text-black-400 mt-2"></p>
                             </div>
+
+
+
+
                         </div>
                     </div>
-                    <!--Task Cards Row_1-->
+
+                    <!-- Task Cards Row 1 -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                        <!--Card 1-->
+                        <!-- Card 1 -->
                         <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                             <div class="text-gray-600 text-sm mb-2">ShopEase</div>
-                            <div class="font-medium text-lg mb-3">Fix Mobile button Issue</div>
-                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools,check for overlapping...
+                            <div class="font-medium text-lg mb-3">Fix Mobile Button Issue</div>
+                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools, check for
+                                overlapping...
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
@@ -104,55 +115,92 @@
                                     data-task="Fix Mobile Button Issue" data-id="1">Completed</button>
                             </div>
                         </div>
-                    </div>
 
-                    <!---Card 2-->
-
-                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <div class="text-gray-600 text-sm mb-2">CloudSync</div>
-                        <div class="font-medium text-lg mb-3">Add Dark Mode</div>
-                        <div class="text-gray-500 text-sm mb-4">Store the user's preferences in localStorage,update
-                            CSS...</div>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <div class="text-gray-600 text-xs">Deadline</div>
-                                <div class="text-sm font-medium">21 March 2025
-
-                                </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <div class="text-gray-600 text-sm mb-2">CloudSync</div>
+                            <div class="font-medium text-lg mb-3">Add Dark Mode</div>
+                            <div class="text-gray-500 text-sm mb-4">Store the user's preference in localStorage, update
+                                CSS...
                             </div>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
-                                data-task="Add Dark Mode" data-id="2">Completed</button>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="text-gray-600 text-xs">Deadline</div>
+                                    <div class="text-sm font-medium">21 March 2025</div>
+                                </div>
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
+                                    data-task="Add Dark Mode" data-id="2">Completed</button>
+                            </div>
                         </div>
 
-                    </div>
-                    <!--Card 3-->
-                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <div class="text-gray-600 text-sm mb-2">SwiftPay
-
-                        </div>
-                        <div class="font-medium text-lg mb-3">Optimize Home Page</div>
-                        <div class="text-gray-500 text-sm mb-4"> Debug using Chrome DevTools,check for overlapping
-                            elements.</div>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <div class="text-gray-600 text-xs">Deadline</div>
-                                <div class="text-sm font-medium">21 March 2025
-
+                        <!-- Card 3 -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <div class="text-gray-600 text-sm mb-2">SwiftPay</div>
+                            <div class="font-medium text-lg mb-3">Optimize Home page</div>
+                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools, check for overlapping
+                                elements.</div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="text-gray-600 text-xs">Deadline</div>
+                                    <div class="text-sm font-medium">21 March 2025</div>
                                 </div>
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
+                                    data-task="Optimize Home page" data-id="3">Completed</button>
                             </div>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
-                                data-task="Optimize Home page" data-id="3">Completed
+                        </div>
+                    </div>
 
-                            </button>
+                    <!-- Task Cards Row 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Card 4 -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <div class="text-gray-600 text-sm mb-2">Meta</div>
+                            <div class="font-medium text-lg mb-3">Add new emoji 🤲</div>
+                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools, check for overlapping
+                                elements.</div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="text-gray-600 text-xs">Deadline</div>
+                                    <div class="text-sm font-medium">21 March 2025</div>
+                                </div>
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
+                                    data-task="Add new emoji" data-id="4">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <div class="text-gray-600 text-sm mb-2">Google LLC</div>
+                            <div class="font-medium text-lg mb-3">Integrate OpenAI API</div>
+                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools, check for overlapping
+                                elements.</div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="text-gray-600 text-xs">Deadline</div>
+                                    <div class="text-sm font-medium">21 March 2025</div>
+                                </div>
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
+                                    data-task="Integrate OpenAI API" data-id="5">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <div class="text-gray-600 text-sm mb-2">Glassador</div>
+                            <div class="font-medium text-lg mb-3">Improve Job searching</div>
+                            <div class="text-gray-500 text-sm mb-4">Debug using Chrome DevTools, check for overlapping
+                                elements.</div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="text-gray-600 text-xs">Deadline</div>
+                                    <div class="text-sm font-medium">21 March 2025</div>
+                                </div>
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md complete-btn"
+                                    data-task="Improve Job searching" data-id="6">Completed</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-        </div>
-
-    </section>
 </body>
 
 </html>
